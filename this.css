@@ -1,0 +1,158 @@
+h1 {
+  font-size: 32px;
+}
+
+body {
+  background-color: powderblue;
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: Cyan;
+  }
+}
+
+#header_container {
+  position: fixed;
+  top: 0;
+  left: 20;
+  width: calc(100% - 40px);
+  /* padding: 0 20px; */
+  /* min-height: 100px; */
+  /* border: 1px solid blue; */
+}
+
+#header {
+  
+  display: flex;
+  justify-content: space-between;
+  /* width: auto; */
+  min-height: 100px;
+  background: url("./img/starry-night.jpg");
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+}
+
+#nav-brand {
+ /* 
+ position: fixed;
+  left: 0;
+*/
+  
+  display: flex;
+  flex-wrap: row wrap;
+  margin: 20px;
+  box-sizing: border-box;
+  /* vertical-align: center; */
+  min-width: 200px;
+  min-height: 80px;
+  border: 1px solid black;
+  background: red;
+
+}
+
+#header-img {
+  height: 40px;
+  width: 40px;
+  margin: 20px;
+  object-fit: contain;
+}
+
+#brand_text {
+  height: 100px;
+  min-width: 290px;
+  padding: 0 20px;
+  /* padding-bottom: 30px; */
+}
+/*
+#nav-brand a img {
+same thing as #header-img but the instructions said we needed an id="header-img", so we target that.
+}
+*/
+
+#nav-bar {
+  /*
+  position: fixed;
+  right: 0;
+  */
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  min-height: 80px;
+  min-width: 200px;
+  margin: 20px;
+  border: 1px solid black;
+  background: orange;
+   /* align-items: center; ? */
+}
+
+ul  {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+li {
+  margin-right: 35px;
+
+}
+#nav-bar a {
+  margin: 5px;
+  /*   vertical-align: middle; */
+}
+
+#nav-bar a:hover {
+}
+
+#nav-bar a:active {
+}
+
+
+#about {
+  background-color: pink;
+  text-align: center;
+  margin-top: 102px;
+  padding: 20px;
+  height: 300px;
+}
+
+#products {
+  text-align: center;
+  padding: 20px;
+  background-color: orange;
+}
+
+#products_container {
+  display: flex;
+  /* width: 100%; */
+  /* text-align: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#copperhead,
+#rattlesnake,
+#water_moccasin {
+  display: static;
+  height: 250px;
+  width: 250px;
+  min-width: 250px;
+  border: solid;
+  margin: 30px;
+  padding: 15px;
+}
+
+.something {
+}
+
+#submit {
+}
+
+#return_policy {
+  background-color: darkgray;
+  text-align: center;
+  padding: 20px;
+  height: 300px;
+}
