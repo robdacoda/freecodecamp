@@ -1,22 +1,25 @@
 h1 {
   font-size: 32px;
 }
+p {
+  font-size: 16px;
+}
 
 body {
   background-color: powderblue;
   padding: 10px;
 }
 
-@media (min-width: 600px) {
-  body {
-    background-color: Cyan;
-  }
+#main {
+  background: no-repeat url("paige-weber-KRNk8oosHTg-unsplash.jpg");
+  background-size: cover;
 }
 
 #header_container {
   position: fixed;
   top: 0;
   left: 20;
+  box-sizing: border-box;
   width: calc(100% - 40px);
   /* padding: 0 20px; */
   /* min-height: 100px; */
@@ -24,47 +27,46 @@ body {
 }
 
 #header {
-  
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
-  /* width: auto; */
-  min-height: 100px;
-  background: url("./img/starry-night.jpg");
+  width: 100%;
+  box-sizing: border-box;
+  /* min-height: 240px; */
   flex-wrap: wrap;
   /* border: 1px solid black; */
+  /* background: yellow; */
 }
 
 /* Photo by <a href="https://unsplash.com/@paigewtothew?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paige Weber</a> on <a href="https://unsplash.com/@paigewtothew?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
-  
+
 #nav-brand {
- /* 
- position: fixed;
-  left: 0;
-*/
-  
   display: flex;
-  flex-wrap: row wrap;
-  margin: 20px;
+  /* flex-wrap: row wrap; */
+  flex-wrap: wrap;
   box-sizing: border-box;
+  margin: 20px;
   /* vertical-align: center; */
-  min-width: 200px;
-  min-height: 80px;
+  min-width: 400px;
+  min-height: 100px;
+  /* height: 100px; */
   border: 1px solid black;
   background: red;
-
 }
 
 #header-img {
-  height: 40px;
-  width: 40px;
-  margin: 20px;
+  height: 98px;
+  width: 98px;
+  /* margin: 20px; */
   object-fit: contain;
 }
 
 #brand_text {
-  height: 100px;
+  display: flex;
+  flex-wrap: row wrap;
+  box-sizing: border-box;
+  height: 80px;
   min-width: 290px;
-  padding: 0 20px;
+  padding: 0px 30px 20px 20px;
   /* padding-bottom: 30px; */
 }
 /*
@@ -74,32 +76,32 @@ same thing as #header-img but the instructions said we needed an id="header-img"
 */
 
 #nav-bar {
-  /*
-  position: fixed;
-  right: 0;
-  */
-  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  min-height: 80px;
-  min-width: 200px;
+  box-sizing: border-box;
+  min-height: 100px;
+  height: 100px;
+  min-width: 400px;
   margin: 20px;
   border: 1px solid black;
   background: orange;
-   /* align-items: center; ? */
 }
 
-ul  {
+ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+}
+
+.nav-link {
+  font-size: 20px;
 }
 
 li {
   margin-right: 35px;
-
 }
+
 #nav-bar a {
   margin: 5px;
   /*   vertical-align: middle; */
@@ -111,32 +113,51 @@ li {
 #nav-bar a:active {
 }
 
-
 #about {
-  background-color: pink;
+  box-sizing: border-box;
   text-align: center;
-  margin-top: 102px;
-  padding: 20px;
-  height: 300px;
+  margin-top: 280px;
+  padding: 50px;
+  height: 760px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+}
+
+#container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* justify-content: center; */
+  border: 1px solid red;
+  width: 360px;
+  text-align: center;
+}
+
+#vid {
+  margin-bottom: 25px;
 }
 
 #products {
+  box-sizing: border-box;
   text-align: center;
-  padding: 20px;
-  background-color: orange;
+  padding: 50px 50px 295px 50px;
+  /* margin: 60px 0; */
+  background-color: rgba(0, 102, 255, 0.385);
 }
 
 #products_container {
+  box-sizing: border-box;
   display: flex;
   /* width: 100%; */
   /* text-align: center; */
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 #copperhead,
 #rattlesnake,
 #water_moccasin {
+  box-sizing: border-box;
   display: static;
   height: 250px;
   width: 250px;
@@ -144,6 +165,7 @@ li {
   border: solid;
   margin: 30px;
   padding: 15px;
+  background-color: orange;
 }
 
 .something {
@@ -153,8 +175,20 @@ li {
 }
 
 #return_policy {
-  background-color: darkgray;
+  box-sizing: border-box;
+  /* background-color: darkgray; */
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.509),
+    rgba(255, 255, 255, 0)
+  );
   text-align: center;
-  padding: 20px;
-  height: 300px;
+  padding: 50px;
+  height:750px;
+}
+
+@media (min-width: 935px) {
+  #products {
+    background-color: rgba(0, 255, 255, 0.166);
+  }
+  
 }
