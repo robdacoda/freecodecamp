@@ -53,7 +53,8 @@
       <br>
 
       <div id="video_container">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B99lKuzMh3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        <h2>Snake Oil Salesmen</h2>
+        <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/B99lKuzMh3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h2>Snake Oil Salesmen</h2>
         <br>
         <br>
 
@@ -116,12 +117,11 @@
 
     <br>
 
-    <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+    <form id="form" target="blank" action="https://www.freecodecamp.com/email-submit" method="POST">
       
       <label for="email">email </label>
-      <input id="email" type="email" placeholder="enter email"/> 
-  
-      <button id="submit">Submit</button>
+      <input id="email" name="email"type="email" placeholder="enter email"/> 
+      <input id="submit" type="submit">Submit</button>
   
       <br> 
       <br>
