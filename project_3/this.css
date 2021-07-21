@@ -124,12 +124,12 @@ li {
   border: 3px solid white;
 }
 
-#container {
+#video_container {
   box-sizing: border-box;
   margin: 0 auto;
   /* justify-content: center; */
-  border: 1px solid red;
-  width: 360px;
+  /* border: 1px solid red; */
+  width: 560px;
   text-align: center;
 }
 
