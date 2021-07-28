@@ -1,0 +1,125 @@
+code { 
+   display: block;
+   background-color: rgb(210, 210, 210)
+
+}
+
+#uber-container {
+   background-color: yellow;
+   box-sizing: border-box;
+   padding: 20px;
+   display: flex;
+
+}
+
+#navbar {
+   display: inline-block;
+   box-sizing: border-box;
+   width: 220px;
+   /* max-width: 220px; */
+   border: 1px solid black;
+   margin-right: 20px;
+   background-color: rgb(255, 92, 71);
+
+} 
+
+#page-title {
+   box-sizing: border-box;
+   width: 220px;
+   /* max-width: 220px; */
+   border: 1px solid black;
+   height: 170px;
+   padding: 50px 0px 10px 0px;
+   /* margin-bottom: 10px; */
+   background-color: orange;
+   text-align: center;
+
+}
+
+#nav-list {
+   box-sizing: border-box;
+   width: 220px;
+   /* max-width: 220px; */
+   border: 1px solid black;
+   height: 621px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+
+}
+
+#nav-list-spacer {
+   box-sizing: border-box;
+   height: 350px;
+   width: 220px;
+   max-width: 220px;
+
+}
+
+.nav-link {
+   display: inline-block;
+   box-sizing: border-box;
+   border: 1px solid black;
+   padding: 11px;
+   margin: 10px;
+   width: 160px;
+   max-width: 160px;
+
+}
+
+#main-doc {
+   /* margin-left: 180px; */
+   box-sizing: border-box;
+   display: inline-block;
+   padding: 0px 20px 0px 40px;
+   border: 1px solid black;
+   background-color: rgb(136, 136, 255);
+   /* width: 300px; */
+   height: 800px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+
+}
+
+@media (max-width: 540px) {
+ 
+   #main-doc, #navbar, #page-title, #nav-list, #nav-list-spacer {
+      width: 89%;
+    
+   }
+
+   #navbar {
+      position: fixed;
+      top: 0;
+      width: 89%;
+      max-height: 300px;
+   }
+
+   #page-title {
+      height: 100px;
+      padding-top: 20px;
+      width: 100%;
+   }
+
+   #nav-list-spacer {
+      height: 0px;
+   }
+
+   #nav-list {
+      max-height: 155px;
+      width: 100%;
+      overflow: hidden;
+   }
+
+   .nav-link {
+      box-sizing: content-box;
+      width: 100px;
+      max-width: 90px;
+   }
+  
+   #main-doc {
+      margin-top: 255px;
+      width: 100%
+
+   }
+   
+}
