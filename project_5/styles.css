@@ -1,0 +1,63 @@
+code { 
+   display: block;
+   background-color: rgb(210, 210, 210)
+
+}
+
+#navbar {
+   display: inline-block;
+   box-sizing: border-box;
+   position: fixed-top;
+   /* max-width: 220px; */
+   background-color: rgb(171, 25, 6);
+
+} 
+
+.all-sections {
+   box-sizing: border-box;
+   height: calc(100%vh-100px);
+
+}
+
+#welcome-section {
+   background-image: url("./gettyimages-155598628-170667a.jpg");
+
+}
+
+#projects {
+   background-color: blue;
+
+}
+
+#contact {
+   background-color: green;
+
+}
+
+.nav-link {
+   display: inline-block;
+   box-sizing: border-box;
+   border: 1px solid black;
+   padding: 11px;
+   margin: 10px;
+   width: 160px;
+   max-width: 160px;
+   color:rgb(210, 210, 210)
+}
+
+#body {
+ 
+   background-color: rgb(22, 22, 33);
+   height: vh;
+
+}
+
+@media (max-width: 540px) {
+ 
+   #main-doc {
+      margin-top: 255px;
+      width: 100%
+
+   }
+   
+}
