@@ -1,62 +1,241 @@
 code { 
    display: block;
-   background-color: rgb(210, 210, 210)
+   background-color: rgb(210, 210, 210);
+
+}
+
+h1 { 
+   color:rgb(255, 255, 255);
+   font-size: 50px;
+
+}
+
+h2 {
+   color:rgb(162, 160, 160);
+   font-size: 30px;
+   margin: 10px;
+}
+
+h3 {
+   color:rgb(162, 160, 160);
+
+}
+
+h4 {
+   margin: 10px;
+}
+
+h5 {
+   color:rgb(255, 255, 255);
+
+}
+
+body {
+ 
+   background-color: rgb(171, 25, 6);
 
 }
 
 #navbar {
-   display: inline-block;
+   display: flex;
+   justify-content: flex-end;
+   vertical-align: middle;
    box-sizing: border-box;
-   position: fixed-top;
-   /* max-width: 220px; */
-   background-color: rgb(171, 25, 6);
+   position: fixed;
+   top: 0px;
+   /* justify-content: space-evenly; */
+   width: 100%;
+   background-color: rgba(171, 25, 6, 1);
+   border-bottom: 1px solid black;
 
 } 
 
-.all-sections {
+#page-title {
+   display: inline-block;
    box-sizing: border-box;
-   height: calc(100%vh-100px);
+   text-align: center;
+   min-width: 320px;    
+   /* border: 4px solid black; */
+   margin-right: 9px;
+   margin-left: 40px;
 
 }
 
-#welcome-section {
-   background-image: url("./gettyimages-155598628-170667a.jpg");
 
-}
-
-#projects {
-   background-color: blue;
-
-}
-
-#contact {
-   background-color: green;
+#nav-list {
+   display: inline-block;
+   margin-top: 11px;
 
 }
 
 .nav-link {
    display: inline-block;
    box-sizing: border-box;
-   border: 1px solid black;
-   padding: 11px;
+   /* border: 1px solid black; */
+   /* padding: 6px 4px; */
+   margin: 4px;
+   width: 80px;
+   max-width: 80px;
+   text-align: center;
+   color:rgb(162, 160, 160);
+
+}
+
+
+.all-sections {
+   box-sizing: border-box;
+   height: 100vh;
+   margin: 0px;
+  
+}
+
+.spacer-top {
+   height: 80px;
+
+}
+
+#welcome-title {
+   text-align: left;
+   padding-left: 50px;
+
+}
+
+#why-title {
+   text-align: center;
+
+}
+
+#projects-title {
+   text-align: center;
+
+}
+
+#contact-title {
+   text-align: right;
+   padding-right: 50px;
+
+}
+
+#welcome-content-container, #why-content-container, #projects-content-container, #contact-content-container {
+   position: relative; 
+   /* so that we will be able to use  
+   relative positioning with divs inside */
+   z-index: -1; 
+   /* because a relative-positioned item will 
+   rise to the top, I guess, and it overlapped the navbar. */
+
+}
+
+#welcome-content-container {
+   height: 65%;
+   background-image: url("./gettyimages-155598628-170667a.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+}
+
+#why-content-container {
+   height: 65%;
+   background-image: url(https://static.wixstatic.com/media/a4e7a5_4768b879d0914d2d99285996aab400e8~mv2_d_2250_1792_s_2.jpg/v1/fill/w_960,h_766,al_c,q_85,usm_0.66_1.00_0.01/ChristianFlag-Photo.webp);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: auto;
+
+}
+
+#projects-content-container {
+   /* background-color: blue; */
+   height: 65%;
+   background-image: url(https://static.wixstatic.com/media/a4e7a5_4768b879d0914d2d99285996aab400e8~mv2_d_2250_1792_s_2.jpg/v1/fill/w_960,h_766,al_c,q_85,usm_0.66_1.00_0.01/ChristianFlag-Photo.webp);
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 100% auto;   
+  
+}
+
+#contact-content-container {
+   height: 65%;
+   background-image: url("https://images.dailycaller.com/image/width=1280,height=549,fit=cover,f=auto/https://cdn01.dailycaller.com/wp-content/uploads/2020/11/Marines-e1605019991471.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: auto;
+
+}
+
+#contact-form-container {
+
+   width: 180px;
+   height: 100px;
+   position: absolute;
+   left: 250px;
+   bottom: 0px;
+   padding: 0px 10px;
+   border: 2px solid blue;
+   
+}
+
+#projects-links-container {
+   /* width: 100%; */
+   box-sizing: border-box;
+   width: 265px;
+   height: 265px;
+   position: absolute;
+   right: 0px;
+   bottom: 0px;
+   display: flex;
+   flex-wrap: wrap;
+   padding: 10px;
+   border: 2px solid orange;
+   /* display: flex; */
+   /* align-content: flex-end; */
+   /* flex-direction: column-reverse; */
+   
+}
+
+.project-tile {
+   /* display: block-inline; */
+   height: 100px;
+   width: 100px;
+   background-color:rgb(162, 160, 160);
    margin: 10px;
-   width: 160px;
-   max-width: 160px;
-   color:rgb(210, 210, 210)
+   
 }
 
-#body {
- 
-   background-color: rgb(22, 22, 33);
-   height: vh;
+#welcome-text-container, #why-text-container, #contact-text-container {
+   width: 180px;
+   height: 265px;
+   position: absolute;
+   left: 30px;
+   bottom: 0px;
+   padding: 0px 10px;
+   border: 2px solid blue;
+   
+}
+
+#welcome-text-container {
+   /* display: flex; */
+   /* flex-flow: row wrap; */
+   /* flex-wrap: wrap-reverse; */
+   align-items: bottom;
+   /* justify-content: flex-end; */
+}
+
+#projects-text-container {
+   width: 120px;
+   height: 265px;
+   position: absolute;
+   left: 30px;
+   bottom: 0px;
+   padding: 0px 10px;
+   border: 2px solid blue;
 
 }
 
-@media (max-width: 540px) {
+@media (min-width: 600px) {
  
-   #main-doc {
-      margin-top: 255px;
-      width: 100%
+   #why-content-container, #projects-content-container {
+      max-width: 900px;
 
    }
    
