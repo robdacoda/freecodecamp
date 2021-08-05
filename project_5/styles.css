@@ -5,24 +5,29 @@ code {
 }
 
 h1 { 
-   color:rgb(255, 255, 255);
    font-size: 32px;
+   color:rgb(255, 255, 255);
 
 }
 
 h2 {
-   color:rgb(162, 160, 160);
+   margin: 2px;
    font-size: 32px;
-   margin: 10px;
+   color:rgb(162, 160, 160);
 }
 
 h3 {
-   color:rgb(162, 160, 160);
+   margin: 2px;
+   font-size: 13px;
+   color:rgb(24, 24, 24);
 
 }
 
 h4 {
-   margin: 8px;
+   margin: 4px;
+   font-size: 20px;
+   color:rgb(162, 160, 160);
+
 }
 
 h5 {
@@ -31,40 +36,47 @@ h5 {
 }
 
 body, #navbar {
- 
    background-color: rgb(194, 54, 35);
 
 }
 
 #navbar {
+   display: block;
    position: fixed;
    top: 0px;
-   width: 98%;
+
+   box-sizing: border-box;
+   width: 99%;
    height: 144px;
    max-height: 144px;
-   box-sizing: border-box;
    border-bottom: 1px solid black;
    /* vertical-align: center; */
    
 } 
 
-#brand-icon {
+#brand-container {
+ /* this container keeps brand-icon and brand-name together,
+  so that they will scale together. */
    display: block;
-   box-sizing: content-box;
    position: absolute;
    top: 0;
-   left: 0;
+   left: 50px;
+
+}
+
+#brand-icon {
+   display: block;
+   /* position: absolute; */
+   /* top: 0; */
+   /* left: 0; */
+
+   box-sizing: content-box;
    height: 90px;  
    width: 90px;  
    border: 4px solid green;
    margin-right: 4px;
-   margin-left: 50px;
+   /* margin-left: 50px; */
    margin-top: 8px;
-
-   /* If using block-inline: */
-   /* Since divs with text have a baseline, and align to it, */
-   /* we tell both the brand-icon and brand-name to align top. */
-   /* vertical-align: top; */
 
 }
 
@@ -72,34 +84,32 @@ body, #navbar {
    display: block;
    position: absolute;
    top: 0;
-   left: 0;
+   left: 104px;
 
    box-sizing: content-box;
    height: 90px;  
-   min-width: 300px;    
-   text-align: center;
-   border: 4px solid black;
+   min-width: 276px;    
+   border: 4px solid rgb(24, 24, 24);
+   
    margin-right: 0px;
-   margin-left: 154px;
+   /* margin-left: 154px; */
    margin-top: 8px;
 
-   /* If using block-inline: */
-   /* Since divs with text have a baseline, and align to it, */
-   /* we tell both the brand-icon and brand-name to align top. */
-   /* vertical-align: top; */
+   text-align: center;
+
 
 }
 
 #nav-list { 
-   /* display: inline-block; */
    position: absolute;
    top: 0;
    right: 0;
-   height: 90px;
 
+   height: 90px;
    margin-top: 9px;
    margin-bottom: 11px;
-   margin-left: 500px;
+   margin-left: 450px;
+   margin-right: 8px;
 
    display: flex;
    flex-wrap: wrap;
@@ -108,16 +118,15 @@ body, #navbar {
 }
 
 .nav-link {
-   /* display: inline-block; */
+   display: block;
+
    box-sizing: content-box;
-   /* border: 1px solid black; */
-   /* padding: 6px 4px; */
    margin:  4px 6px;
-   /* width: 60px; */
-   /* max-width: 60px; */
-   text-align: center;
-   color:rgb(162, 160, 160);
    font-size: 20px;
+
+   text-align: center;
+
+   color:rgb(162, 160, 160);
 
 }
 
@@ -129,18 +138,18 @@ body, #navbar {
 }
 
 .spacer-top {
-   height: 120px;
+   height: 145px;
 
 }
 
-#welcome-title, #virtues-title, 
+#welcome-title, 
+#virtues-title, 
 #heroes-title,
 #culture-title,
 #nobility-title, 
 #projects-title,
 #contact-title {
    text-align: center;
-   padding-left: 30px;
 
 }
 
@@ -163,19 +172,32 @@ body, #navbar {
 #welcome-content-container {
    height: 65%;
    background-image: url("./gettyimages-155598628-170667a.jpg");
+         /* Getty Images */
+         /* Photographer unknown */
    background-repeat: no-repeat;
    background-position: center;
-   background-size: cover;
+   background-size: contain;
 
 }
 
-#virtues-content-container, 
+#virtues-content-container {
+   height: 65%;
+   background-image: url("./christian_golczynski.png");
+      /* https://www.asoldierschild.org/about */
+      /* Photo attributed to Aaron Thompson */
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+
+}
+
 #heroes-content-container, 
 #culture-content-container, 
 #nobility-content-container {
    height: 65%;
-   background-image: url(https://static.wixstatic.com/media/a4e7a5_4768b879d0914d2d99285996aab400e8~mv2_d_2250_1792_s_2.jpg/v1/fill/w_960,h_766,al_c,q_85,usm_0.66_1.00_0.01/ChristianFlag-Photo.webp);
-    background-attachment: test;
+   background-image: url("./christian_golczynski.png");
+      /* https://www.asoldierschild.org/about */
+      /* Photo attributed to Aaron Thompson */
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
@@ -183,9 +205,10 @@ body, #navbar {
 }
 
 #projects-content-container {
-   /* background-color: blue; */
    height: 65%;
-   /* background-image: url(https://static.wixstatic.com/media/a4e7a5_4768b879d0914d2d99285996aab400e8~mv2_d_2250_1792_s_2.jpg/v1/fill/w_960,h_766,al_c,q_85,usm_0.66_1.00_0.01/ChristianFlag-Photo.webp); */
+   background-image: url("./christian_golczynski.png");
+      /* https://www.asoldierschild.org/about */
+      /* Photo attributed to Aaron Thompson */
    background-repeat: no-repeat;
    background-position: right;
    background-size: contain;   
@@ -194,7 +217,12 @@ body, #navbar {
 
 #contact-content-container {
    height: 65%;
-   background-image: url("https://images.dailycaller.com/image/width=1280,height=549,fit=cover,f=auto/https://cdn01.dailycaller.com/wp-content/uploads/2020/11/Marines-e1605019991471.jpg");
+   background-image: url("Marines-e1605019991471.jpg");
+      /* (Photo by Joe Raedle/Getty Images) */
+      /* dailycaller.com */
+      /* David Hookstead */
+      /* Sports And Entertainment Editor */
+      /* November 10, 2020 9:54 AM ET */
    background-repeat: no-repeat;
    background-position: center;
    background-size: auto;
@@ -208,31 +236,35 @@ body, #navbar {
 #nobility-text-container, 
 #projects-text-container,
 #contact-text-container {
-   width: 230px;
-   height: 180px;
    position: absolute;
    left: 20px;
    bottom: 0px;
+   
+   width: 230px;
+   height: 180px;
    padding: 10px 10px;
    border: 2px solid blue;
+
    color: white;
 }
 
+#contact-text-container {
+   z: -1;
+
 #projects-links-container {
    /* width: 100%; */
-   box-sizing: border-box;
-   width: 265px;
-   height: 265px;
    position: absolute;
    right: 0px;
    bottom: 0px;
-   display: flex;
-   flex-wrap: wrap;
+   
+   box-sizing: border-box;
+   width: 265px;
+   height: 265px;
    padding: 10px;
    border: 2px solid orange;
-   /* display: flex; */
-   /* align-content: flex-end; */
-   /* flex-direction: column-reverse; */
+
+   display: flex;
+   flex-wrap: wrap;
    
 }
 
@@ -240,30 +272,31 @@ body, #navbar {
    /* display: block-inline; */
    height: 100px;
    width: 100px;
-   background-color:rgb(162, 160, 160);
    margin: 10px;
+
+   background-color:rgb(162, 160, 160);
    
 }
 
 #contact-form-container {
-
-   width: 180px;
-   height: 100px;
    position: absolute;
-   left: 300px;
    bottom: 0px;
-   padding: 0px 10px;
-   border: 2px solid blue;
+
+   width: 230px;
+   height: 100px;
+   /* border: 2px solid purple; */
+
    color: white;
 }
-
+   
 @media (max-width: 700px) {
  
    #nav-list {
-      /* display: inline-block;  */
-      margin: 0;
       top: 115px;
       left: 4px;
+
+      margin: 0;
+
    }
    
    .nav-link {
@@ -272,11 +305,30 @@ body, #navbar {
 
 }
 
-@media (max-width: 485px) {
+@media (max-width: 450px) {
  
    #brand-container {
       transform: scale(.75);
+      transform-origin: top left;
    }
    
+   #nav-list {
+      top: 86px;
+      height: 43px;
+   }
+   
+   h1 { 
+      font-size: 24px;
+   
+   }
+
+}
+
+@media (max-width: 354px) {
+ 
+   #brand-container {
+      transform: scale(.65);
+   }
+ 
    
 }
