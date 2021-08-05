@@ -175,7 +175,7 @@ body, #navbar {
          /* Getty Images */
          /* Photographer unknown */
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center top;
    background-size: contain;
 
 }
@@ -186,7 +186,7 @@ body, #navbar {
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center top;
    background-size: contain;
 
 }
@@ -199,7 +199,7 @@ body, #navbar {
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center top;
    background-size: contain;
 
 }
@@ -210,7 +210,7 @@ body, #navbar {
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
    background-repeat: no-repeat;
-   background-position: right;
+   background-position: right top;
    background-size: contain;   
   
 }
@@ -224,7 +224,7 @@ body, #navbar {
       /* Sports And Entertainment Editor */
       /* November 10, 2020 9:54 AM ET */
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center top;
    background-size: auto;
 
 }
@@ -290,7 +290,19 @@ body, #navbar {
    color: white;
 }
    
+@media (max-width: 1440px) {
+
+   #brand-container {
+      transform: scale(.75);
+      transform-origin: top left;
+   }
+}
+
 @media (max-width: 700px) {
+ 
+   #brand-container {
+      transform: scale(.65);
+   }
  
    #nav-list {
       top: 115px;
