@@ -305,9 +305,9 @@ body, #navbar {
    }
  
    #nav-list {
-      top: 115px;
-      left: 4px;
-
+     
+      top: 86px;
+      height: 43px;
       margin: 0;
 
    }
@@ -315,33 +315,10 @@ body, #navbar {
    .nav-link {
       font-size: 16px;
    }
-
-}
-
-@media (max-width: 450px) {
- 
-   #brand-container {
-      transform: scale(.75);
-      transform-origin: top left;
-   }
-   
-   #nav-list {
-      top: 86px;
-      height: 43px;
-   }
-   
+    
    h1 { 
       font-size: 24px;
    
    }
-
 }
 
-@media (max-width: 354px) {
- 
-   #brand-container {
-      transform: scale(.65);
-   }
- 
-   
-}
