@@ -7,7 +7,7 @@ code {
 h1 { 
    font-size: 32px;
    color:rgb(255, 255, 255);
-
+   /* margin: 8px; */
 }
 
 h2 {
@@ -167,64 +167,55 @@ body, #navbar {
    /* because a relative-positioned item will 
    rise to the top, I guess, and it overlapped the navbar. */
 
+   height: 450px;
+
+   background-repeat: no-repeat;
+   background-position: center top;
+   background-size: contain;
+
 }
 
 #welcome-content-container {
-   height: 65%;
    background-image: url("./gettyimages-155598628-170667a.jpg");
          /* Getty Images */
          /* Photographer unknown */
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-size: contain;
-
+ 
 }
 
 #virtues-content-container {
-   height: 65%;
    background-image: url("./christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-size: contain;
+  
 
 }
 
 #heroes-content-container, 
 #culture-content-container, 
 #nobility-content-container {
-   height: 65%;
    background-image: url("./christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-size: contain;
+  
 
 }
 
 #projects-content-container {
-   height: 65%;
    background-image: url("./christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
-   background-repeat: no-repeat;
-   background-position: right top;
-   background-size: contain;   
+  
   
 }
 
 #contact-content-container {
-   height: 65%;
    background-image: url("Marines-e1605019991471.jpg");
       /* (Photo by Joe Raedle/Getty Images) */
       /* dailycaller.com */
       /* David Hookstead */
       /* Sports And Entertainment Editor */
       /* November 10, 2020 9:54 AM ET */
-   background-repeat: no-repeat;
-   background-position: center top;
+
    background-size: auto;
 
 }
@@ -241,7 +232,7 @@ body, #navbar {
    bottom: 0px;
    
    width: 230px;
-   height: 180px;
+   height: 100px;
    padding: 10px 10px;
    border: 2px solid blue;
 
@@ -296,6 +287,25 @@ body, #navbar {
       transform: scale(.75);
       transform-origin: top left;
    }
+
+   #navbar {
+      height: 108px;
+
+   }
+   
+   #nav-list {
+      margin-left: 350px;
+      margin-top: 5px;
+
+   }
+   .spacer-top {
+      height: 100px;
+
+   }
+
+   /* background-size: 700px 400px; */
+
+
 }
 
 @media (max-width: 700px) {
@@ -305,10 +315,10 @@ body, #navbar {
    }
  
    #nav-list {
-     
-      top: 86px;
-      height: 43px;
-      margin: 0;
+      top: 70px;
+      height: 33px;
+      margin-left: 0px;
+
 
    }
    
@@ -320,5 +330,16 @@ body, #navbar {
       font-size: 24px;
    
    }
+
 }
+
+@media (max-width: 456px) {
+
+      .nav-link {
+         font-size: 10px;
+      }
+
+   }
+
+
 
