@@ -167,8 +167,8 @@ body, #navbar {
    /* because a relative-positioned item will 
    rise to the top, I guess, and it overlapped the navbar. */
 
+   /* height: 450px; */
    height: 450px;
-
    background-repeat: no-repeat;
    background-position: center top;
    background-size: contain;
@@ -176,14 +176,14 @@ body, #navbar {
 }
 
 #welcome-content-container {
-   background-image: url("./gettyimages-155598628-170667a.jpg");
+   background-image: url("./img/gettyimages-155598628-170667a.jpg");
          /* Getty Images */
          /* Photographer unknown */
  
 }
 
 #virtues-content-container {
-   background-image: url("./christian_golczynski.png");
+   background-image: url("./img/christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
   
@@ -193,7 +193,7 @@ body, #navbar {
 #heroes-content-container, 
 #culture-content-container, 
 #nobility-content-container {
-   background-image: url("./christian_golczynski.png");
+   background-image: url("./img/christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
   
@@ -201,7 +201,7 @@ body, #navbar {
 }
 
 #projects-content-container {
-   background-image: url("./christian_golczynski.png");
+   background-image: url("./img/christian_golczynski.png");
       /* https://www.asoldierschild.org/about */
       /* Photo attributed to Aaron Thompson */
   
@@ -209,7 +209,7 @@ body, #navbar {
 }
 
 #contact-content-container {
-   background-image: url("Marines-e1605019991471.jpg");
+   background-image: url("./img/Marines-e1605019991471.jpg");
       /* (Photo by Joe Raedle/Getty Images) */
       /* dailycaller.com */
       /* David Hookstead */
