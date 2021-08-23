@@ -5,26 +5,26 @@ code {
 }
 
 h1 { 
-   font-size: 32px;
+   font-size: 3rem;
+   margin: 1rem;
    color:rgb(255, 255, 255);
-   /* margin: 8px; */
 }
 
 h2 {
-   margin: 2px;
-   font-size: 32px;
-   color:rgb(162, 160, 160);
+   font-size: 1.4rem;
+   margin: 1rem;
+
+   color:rgb(255, 255, 255);
 }
 
 h3 {
-   margin: 2px;
-   font-size: 13px;
-   color:rgb(24, 24, 24);
+   font-size: 1rem;
+   /* margin: 1rem; */
+   color:rgb(162, 160, 160);
 
 }
 
 h4 {
-   margin: 4px;
    font-size: 20px;
    color:rgb(162, 160, 160);
 
@@ -41,85 +41,28 @@ body, #navbar {
 }
 
 #navbar {
-   display: block;
    position: fixed;
    top: 0px;
+   z-index: 1; /* stay on top */
 
    box-sizing: border-box;
    width: 99%;
-   height: 144px;
-   max-height: 144px;
+   height: 60px;
    border-bottom: 1px solid black;
-   /* vertical-align: center; */
-   
-} 
-
-#brand-container {
- /* this container keeps brand-icon and brand-name together,
-  so that they will scale together. */
-   display: block;
-   position: absolute;
-   top: 0;
-   left: 50px;
-
-}
-
-#brand-icon {
-   display: block;
-   /* position: absolute; */
-   /* top: 0; */
-   /* left: 0; */
-
-   box-sizing: content-box;
-   height: 90px;  
-   width: 90px;  
-   border: 4px solid green;
-   margin-right: 4px;
-   /* margin-left: 50px; */
-   margin-top: 8px;
-
-}
-
-#brand-name {
-   display: block;
-   position: absolute;
-   top: 0;
-   left: 104px;
-
-   box-sizing: content-box;
-   height: 90px;  
-   min-width: 276px;    
-   border: 4px solid rgb(24, 24, 24);
-   
-   margin-right: 0px;
-   /* margin-left: 154px; */
-   margin-top: 8px;
-
-   text-align: center;
-
-
-}
-
-#nav-list { 
-   position: absolute;
-   top: 0;
-   right: 0;
-
-   height: 90px;
-   margin-top: 9px;
-   margin-bottom: 11px;
-   margin-left: 450px;
-   margin-right: 8px;
 
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
+   padding-top: 18px;  
+} 
+
+#nav-list { 
+
+   height: 60px;
 
 }
 
 .nav-link {
-   display: block;
-
+  
    box-sizing: content-box;
    margin:  4px 6px;
    font-size: 20px;
@@ -133,20 +76,57 @@ body, #navbar {
 .all-sections {
    box-sizing: border-box;
    height: 100vh;
+   min-height: 415px;
    margin: 0px;
   
 }
 
 .spacer-top {
-   height: 145px;
+   height: 60px;
 
 }
 
-#welcome-title, 
-#virtues-title, 
-#heroes-title,
-#culture-title,
-#nobility-title, 
+.welcome-row {
+   display: flex;
+   justify-content: center;
+
+}
+
+.welcome-row h2 {
+   width: 200px;
+   /* border: 1px solid black; */
+
+}
+
+.left-align {
+   text-align: left;
+}
+
+.right-align {
+   text-align: right;
+}
+
+.center {
+   width: 120px;
+
+}
+
+#welcome-section ul {
+   display: flex;
+   justify-content: center;
+
+}
+
+#welcome-section ul li {
+   /* width: 120px; */
+   /* border: 1px solid rgb(56, 21, 185); */
+   text-align: center;
+   /* margin: 1em 2em; */
+   color:rgb(162, 160, 160);
+
+}
+
+#welcome-title,
 #projects-title,
 #contact-title {
    text-align: center;
@@ -154,21 +134,12 @@ body, #navbar {
 }
 
 #welcome-content-container, 
-#virtues-content-container, 
-#heroes-content-container, 
-#culture-content-container, 
-#nobility-content-container, 
 #projects-content-container, 
 #contact-content-container {
    position: relative; 
    /* so that we will be able to use  
    relative positioning with divs inside */
-   z-index: -1; 
-   /* because a relative-positioned item will 
-   rise to the top, I guess, and it overlapped the navbar. */
 
-   /* height: 450px; */
-   height: 450px;
    background-repeat: no-repeat;
    background-position: center top;
    background-size: contain;
@@ -176,78 +147,25 @@ body, #navbar {
 }
 
 #welcome-content-container {
-   background-image: url("./img/gettyimages-155598628-170667a.jpg");
+   background-image: url("");
          /* Getty Images */
          /* Photographer unknown */
  
 }
 
-#virtues-content-container {
-   background-image: url("./img/christian_golczynski.png");
-      /* https://www.asoldierschild.org/about */
-      /* Photo attributed to Aaron Thompson */
-  
-
-}
-
-#heroes-content-container, 
-#culture-content-container, 
-#nobility-content-container {
-   background-image: url("./img/christian_golczynski.png");
-      /* https://www.asoldierschild.org/about */
-      /* Photo attributed to Aaron Thompson */
-  
-
-}
-
 #projects-content-container {
-   background-image: url("./img/christian_golczynski.png");
-      /* https://www.asoldierschild.org/about */
-      /* Photo attributed to Aaron Thompson */
+   background-image: url("");
+   display: flex;
+   justify-content: center;
+   /* border: 1px solid black; */
   
-  
 }
-
-#contact-content-container {
-   background-image: url("./img/Marines-e1605019991471.jpg");
-      /* (Photo by Joe Raedle/Getty Images) */
-      /* dailycaller.com */
-      /* David Hookstead */
-      /* Sports And Entertainment Editor */
-      /* November 10, 2020 9:54 AM ET */
-
-   background-size: auto;
-
-}
-
-#welcome-text-container, 
-#virtues-text-container, 
-#heroes-text-container, 
-#culture-text-container, 
-#nobility-text-container, 
-#projects-text-container,
-#contact-text-container {
-   position: absolute;
-   left: 20px;
-   bottom: 0px;
-   
-   width: 230px;
-   height: 100px;
-   padding: 10px 10px;
-   border: 2px solid blue;
-
-   color: white;
-}
-
-/* #contact-text-container { */
-   /*  */
-/* } */
 
 #projects-links-container {
    /* width: 100%; */
-   position: absolute;
-   right: 0px;
-   bottom: 0px;
+   /* position: absolute; */
+   /* right: 0px; */
+   /* bottom: 0px; */
    
    box-sizing: border-box;
    width: 265px;
@@ -265,81 +183,88 @@ body, #navbar {
    height: 100px;
    width: 100px;
    margin: 10px;
-
+   line-height: .6rem;
+   font-size: .7rem;
    background-color:rgb(162, 160, 160);
    
 }
 
+.project-tile img {
+   /* display: block-inline; */
+   width: 100%;
+   background-color:rgb(162, 160, 160);
+   
+}
+#contact-content-container {
+  
+   background-size: auto;
+   display: flex;
+   justify-content: center;
+}
+
 #contact-form-container {
-   position: absolute;
-   bottom: 0px;
+   /* position: absolute; */
+   /* bottom: 0px; */
 
    width: 230px;
    height: 100px;
-   /* border: 2px solid purple; */
+   border: 2px solid purple;
 
+   /* display: flex; */
+   /* justify-content: center; */
+   text-align: center;
    color: white;
-}
+
    
+}
+
 @media (max-width: 1440px) {
 
-   #brand-container {
-      transform: scale(.75);
-      transform-origin: top left;
-   }
-
-   #navbar {
-      height: 108px;
+   #welcome-section ul li {
+      margin: 0rem 2rem;
 
    }
    
-   #nav-list {
-      margin-left: 350px;
-      margin-top: 5px;
-
-   }
-   .spacer-top {
-      height: 100px;
-
-   }
-
-   /* background-size: 700px 400px; */
-
-
 }
 
-@media (max-width: 700px) {
- 
-   #brand-container {
-      transform: scale(.65);
-   }
- 
-   #nav-list {
-      top: 70px;
-      height: 33px;
-      margin-left: 0px;
 
+@media (max-width: 756px) {
 
-   }
    
-   .nav-link {
-      font-size: 16px;
+  
+}
+
+@media (max-width: 480px) {
+
+
+   h1 {
+      font-size: 2rem;
+
+   } 
+
+   h2 {
+      font-size: 1rem;
+
+   } 
+   
+   h3 {
+      font-size: .8rem;
    }
+  
+   #welcome-section ul li {
+      margin: 0rem 1.2rem;
+
+   }
+}
+
+
+@media (max-width: 374px) {
     
-   h1 { 
-      font-size: 24px;
+   #welcome-section ul li { 
+      margin: 0rem .8rem;
    
    }
 
+ 
+   
 }
-
-@media (max-width: 456px) {
-
-      .nav-link {
-         font-size: 10px;
-      }
-
-   }
-
-
-
