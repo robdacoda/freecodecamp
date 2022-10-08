@@ -5,15 +5,20 @@ marked.setOptions({
 
 const renderer = new marked.Renderer();
 
-const Previewer = (markdown) => {
+const Previewer = (content) => {
 
   return (
-      <div className='preview_container'>
-       <div className='previewer'            dangerouslySetInnerHTML={{
-            _html: marked(markdown, {renderer: marked}),
-         }} 
-       id="preview"
-       ></div>
+      <div className='preview_container'> testing 
+       <div 
+       className='previewer' 
+       dangerouslySetInnerHTML={{
+            __html: 'hello world' 
+         }}
+        //  dangerouslySetInnerHTML={{
+        //     __html: marked(content, {renderer: renderer})
+        //  }} 
+       id="preview" 
+      ></div>
       </div>
   );
 }

@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Editor stuff={stuff} setStuff={setStuff}></Editor>
-      <Previewer markdown={stuff} ></Previewer>
+      <Previewer content={stuff} ></Previewer>
     </div>
   );
 }
