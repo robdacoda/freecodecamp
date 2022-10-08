@@ -10,13 +10,13 @@ const Previewer = (content) => {
   return (
       <div className='preview_container'> testing 
        <div 
-       className='previewer' 
-       dangerouslySetInnerHTML={{
-            __html: 'hello world' 
+      //  className='previewer' 
+      //  dangerouslySetInnerHTML={{
+      //       __html: 'hello world' 
+      //    }}
+         dangerouslySetInnerHTML={{
+            __html: marked(content, {renderer: renderer})
          }}
-        //  dangerouslySetInnerHTML={{
-        //     __html: marked(content, {renderer: renderer})
-        //  }} 
        id="preview" 
       ></div>
       </div>
