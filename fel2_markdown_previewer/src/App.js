@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+import Header from './components/Header.js';
+import Editor from './components/Editor.js';
+import Previewer from './components/Previewer.js';
+
+
 
 function App() {
+  const [stuff, setStuff] = useState('Type some markdown in the top box, and see it rendered down below.');
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Editor stuff={stuff} setStuff={setStuff}></Editor>
+      <Previewer markdown={stuff} ></Previewer>
     </div>
   );
 }

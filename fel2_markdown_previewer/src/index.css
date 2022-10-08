@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Borrowed from create-react-app template */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.editor {
+  min-height: 200px;
+  min-width: 200px;
+  padding: 20px;
+  background-color: burlywood;
+  margin-bottom: 20px;
+}
+
+.previewer {
+  min-height: 200px;
+  min-width: 200px; 
+  margin: 0px 20px;
+  padding: 20px;
+  background-color: mediumaquamarine;
+}
+
+.preview_container {
+display: flex;
+justify-content: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
