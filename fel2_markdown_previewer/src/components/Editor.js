@@ -7,11 +7,19 @@ const Editor = (props) => {
    }
 
   return (
-    <textarea className='editor' id='editorText' name='editorText' placeholder='type here with markdown syntax' autofocus 
-    value={props.stuff} 
+    <textarea className='editor' id='editor'   
+    value={props.stuff} autofocus name='textarea'
     onChange={handleTextChange}
+   
     > </textarea>
   )
 }
+
+ const sampleText = <link rel="sample.txt"/> ;
+
+Editor.defaultProps = {
+   content: sampleText
+};
+   
 
 export default Editor

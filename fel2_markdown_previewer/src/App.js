@@ -7,9 +7,20 @@ import Previewer from './components/Previewer.js';
 
 
 function App() {
-  const [stuff, setStuff] = useState('Type some markdown in the top box, and see it rendered down below.');
+
+  const fileURL = './sample.txt';
+fetch(fileURL)
+.then( response => response.text() )
+.then( sampleText => {
+
+  setStuff(sampleText);
+}
+);
+
+  const [stuff, setStuff] = useState('');
 
   console.log('watermelon1');
+
 
   return (
     <div className="App">

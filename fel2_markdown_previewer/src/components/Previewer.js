@@ -6,13 +6,12 @@ marked.setOptions({
 
 const Previewer = ({stuffAsProps}) => {
 
-    console.log('watermelon5');
-
-  // const dummy = marked.parse(stuffAsProps);
-
+  console.log('watermelon5');
   console.log(stuffAsProps); 
 
-  const dummy = marked.parse(JSON.stringify(stuffAsProps));
+  // const dummy = marked.parse(JSON.stringify(stuffAsProps));
+
+const dummy = marked.parse(stuffAsProps);
 
  return (
       <div 
@@ -28,9 +27,7 @@ const Previewer = ({stuffAsProps}) => {
   );
  }
 
-Previewer.defaultProps = {
-   content: 'This is default text'
-}
+
 export default Previewer;
 
 
