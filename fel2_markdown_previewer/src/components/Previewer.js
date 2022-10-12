@@ -1,29 +1,45 @@
 import { marked } from 'marked';
 
 marked.setOptions({
-  breaks: true});
+  breaks: true
+ });
 
-const renderer = new marked.Renderer();
+const Previewer = ({stuffAsProps}) => {
 
-const Previewer = (content) => {
+    console.log('watermelon5');
 
-  return (
-      <div className='preview_container'> testing 
-       <div 
-      //  className='previewer' 
-      //  dangerouslySetInnerHTML={{
-      //       __html: 'hello world' 
-      //    }}
-         dangerouslySetInnerHTML={{
-            __html: marked(content, {renderer: renderer})
-         }}
-       id="preview" 
-      ></div>
+  // const dummy = marked.parse(stuffAsProps);
+
+  console.log(stuffAsProps); 
+
+  const dummy = marked.parse(JSON.stringify(stuffAsProps));
+
+ return (
+      <div 
+      className='preview_container'> 
+      testing 
+      <br></br>
+      <br></br>
+
+       <div id="preview" className='previewer' dangerouslySetInnerHTML={{ __html: dummy
+       }}></div>
+
       </div>
   );
-}
+ }
 
 Previewer.defaultProps = {
-   stuff: 'This is default text'
+   content: 'This is default text'
 }
 export default Previewer;
+
+
+       // eslint-disable-next-line no-lone-blocks
+       {/* <div id="preview" className='previewer' dangerouslySetInnerHTML={{ 
+         marked(__html: {stuffAsProps}, {renderer: renderer})
+       }}> */}
+
+        // eslint-disable-next-line no-lone-blocks
+        {/* <div id="preview" className='previewer' 
+        dangerouslySetInnerHTML={{  __html: convertIt(stuffAsProps.stuff)
+       }}></div> */}

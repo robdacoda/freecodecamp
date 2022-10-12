@@ -7,7 +7,7 @@ const Editor = (props) => {
    }
 
   return (
-    <textarea className='editor' id='editorText' name='editorText' 
+    <textarea className='editor' id='editorText' name='editorText' placeholder='type here with markdown syntax' autofocus 
     value={props.stuff} 
     onChange={handleTextChange}
     > </textarea>
