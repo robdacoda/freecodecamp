@@ -1,5 +1,7 @@
 import React from 'react'
 
+  console.log('watermelon3');
+
 const Editor = (props) => {
 
     const handleTextChange = (event) => {
@@ -8,18 +10,13 @@ const Editor = (props) => {
 
   return (
     <textarea className='editor' id='editor'   
-    value={props.stuff} autofocus name='textarea'
+    value={props.stuff} autoFocus name='textarea'
     onChange={handleTextChange}
    
     > </textarea>
   )
 }
 
- const sampleText = <link rel="sample.txt"/> ;
-
-Editor.defaultProps = {
-   content: sampleText
-};
    
 
 export default Editor

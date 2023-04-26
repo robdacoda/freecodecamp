@@ -8,23 +8,20 @@ import Previewer from './components/Previewer.js';
 
 function App() {
 
-  const fileURL = './sample.txt';
-fetch(fileURL)
-.then( response => response.text() )
-.then( sampleText => {
-
-  setStuff(sampleText);
-}
-);
-
   const [stuff, setStuff] = useState('');
+
+  const fileURL = './sample.txt';
+  fetch(fileURL)
+  .then( response => response.text() )
+  .then( sampleText => {
+    setStuff(sampleText)
+    }
+  );
 
   console.log('watermelon1');
 
-
   return (
     <div className="App">
-
       <Header></Header>
 
       <Editor stuff={stuff} setStuff={setStuff}></Editor>  

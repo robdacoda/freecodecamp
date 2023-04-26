@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
 import logo from '../logo.svg';
+
+  console.log('watermelon2');
 
 const Header = () => {
   return (
@@ -10,4 +12,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
