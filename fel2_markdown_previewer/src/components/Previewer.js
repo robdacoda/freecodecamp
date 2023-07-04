@@ -15,33 +15,33 @@ console.log('watermelon4');
 // If you wanna write some Markdown, see this: https://www.markdownguide.org/cheat-sheet/
 
 marked.setOptions({
-   renderer: new marked.Renderer(),
-   highlight: function(code, lang) {
+  renderer: new marked.Renderer(),
+  highlight: function(code, lang) {
     const hljs = require('highlight.js');
     const language = hljs.getLanguage(lang) ? lang : 'plaintext';
     return hljs.highlight(code, { language }).value;
   },
-    langPrefix: 'hljs language-', // highlight.js css expects a top-level 'hljs' class.
-    pedantic: false,
-    gfm: true,
-    breaks: true,
-    sanitize: false,
-    smartypants: false,
-    xhtml: false
+  langPrefix: 'hljs language-', // highlight.js css expects a top-level 'hljs' class.
+  pedantic: false,
+  gfm: true,
+  breaks: true,
+  sanitize: false,
+  smartypants: false,
+  xhtml: false
 });
 
 
 const Previewer = ({stuffAsProps}) => {
 
+  const dummy = marked.parse(stuffAsProps);
 
-const dummy = marked.parse(stuffAsProps);
-
-
- return (
+  return (
+    <div className='preview_container'> 
       <div 
-      className='preview_container'> 
-     <div id="preview" className='previewer' dangerouslySetInnerHTML={{ __html: dummy
-       }}/>
+        id="preview" 
+        className='previewer' 
+        dangerouslySetInnerHTML={{ __html: dummy}}
+      />
 
     </div>
   );

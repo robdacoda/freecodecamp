@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Required meta tags --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta</p>
+<p class="p1"><span class="Apple-converted-space">      </span>name="viewport"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content="width=device-width, initial-scale=1, shrink-to-fit=no"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="./this.css" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Random Quote Generator&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="quote-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="text-author-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="text"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="author"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="buttons-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="new-quote" class="button button1" onclick="getStuff()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>New quote</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a</p>
+<p class="p1"><span class="Apple-converted-space">              </span>id="tweet-quote"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>class="button2 anchorButton"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>href="twitter.com/intent/tweet"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>target="blank"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&gt;&lt;img width="40px" src="./twitter.svg"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--#buttons-container--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!--#quote-box--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--#container--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* width: 100%; */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100vh;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 90vw;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 90vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#quote-box {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-around;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 80%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 60%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-width: 250px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-height: 250px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 3px black solid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: rgba(75, 94, 171, 0.612);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#text-author-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#text-author-container,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#text,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#author {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px white solid;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#text,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#author {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-width: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#text {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: left;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#author {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-height: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 30%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>#buttons-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: row;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-evenly;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.button1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 62px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 43px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.button1:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #9ef59a;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.anchorButton {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1.5px solid black;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.anchorButton:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #63a3f2;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// get quote</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let bigLongString =</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa facere, enim architecto odio doloribus quos. Natus ex cumque rerum, voluptatem minus rem consequatur assumenda dolorum error officia id fugit quasi exercitationem maxime, dolores doloribus dicta perspiciatis tempora ad esse numquam odio molestiae. Laboriosam iure id beatae, odio enim ex iusto voluptas laudantium maxime voluptates fugit dolorum harum aperiam doloremque dignissimos ab eius repellat cumque esse, tempore autem. Aspernatur, recusandae velit.";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function getRandomInt(max) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return Math.floor(Math.random() * max);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function getQuote() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let x = getRandomInt(30);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let y = getRandomInt(200);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (x &lt; y) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return bigLongString.slice(x, y);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return bigLongString.slice(y, x);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>console.log(getQuote());</p>
+<p class="p1"><span class="Apple-converted-space">  </span>console.log("Hello Wuorld");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let authorName = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>authorName = ["Fred", "Sue", "Joe", "Random Man", "Molly"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function getAuthorName() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return authorName[Math.round(getRandomInt(5))];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function getStuff() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("text").innerText = getQuote();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("author").innerText = "-<span class="Apple-converted-space">  </span>" + getAuthorName();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>getStuff();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"&gt;&lt;/script&gt;</p>
+</body>
+</html>
